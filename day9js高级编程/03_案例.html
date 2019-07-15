@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>案例灯泡</title>
+</head>
+<body>
+<img id="light" src="img/off.gif">
+<script>
+    /*
+    * 分析：
+    *      1,获取图片对象
+    *       2，绑定单击事件
+    *       3，每次点击切换图片
+    *           规则：
+    *                  如果是灯开的，on，切换图片为off
+    *                  反之类似。
+    *           使用flag来标记
+    * */
+    var light = document.getElementById("light");
+    var flag = false; //代表灯是灭的，off图片
+    light.onclick = function () {
+        if (flag) { //判断如果灯饰开的，则灭掉
+            light.src = "img/off.gif";
+            flag = false;
+        } else {//如果灯是灭的，则打开
+            light.src = "img/on.gif";
+            flag = true;
+        }
+    }
+
+
+</script>
+</body>
+</html>

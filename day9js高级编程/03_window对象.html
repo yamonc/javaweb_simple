@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+</head>
+<body>
+<input type="button" value="打开窗口" id="openBtn">
+<input type="button" value="关闭窗口" id="closeBtn">
+    <script>
+        /*
+        *   window窗口对象：
+        *       1，创建
+        *       2，方法
+        *           1。alert
+        *           2，comfirm
+        *               ,如果用户点击确定按钮，则方法返回true
+        *               ，如果用户点击取消按钮，则方法返回false
+        *           3，prompt 显示可以提示用户输入的对话框
+        *               返回值：获取用户输入的值
+        *           4与打开关闭有关的方法
+        *               close（）：谁调用我，我关谁；
+        *               open（）；返回一个新的window对象
+        *           5与定时器有关的方法
+        *               setTimeout()
+        *                   参数1：js代码或者方法函数对象
+        *                   参数2；毫秒值
+        *                   返回值：返回唯一编号，用于取消定时器
+        *               clearTimeout()
+        *               setInterval():按照指定周期来调用函数或者计算方法
+        *               clearInterval();
+        *       3，属性
+        *             1,获取其他BOM对象
+        *                   history
+        *                   location
+        *                   Navigator
+        *                   Screen
+        *              2,获取DOM对象
+        *                   document
+        *       4，特点
+        *           window不需要创建可以直接 使用window。方法名（）；
+        *           window引用可以省略，直接方法名（）；
+        *
+         * */
+        /*  alert("hello ");
+          window.alert("hello a ");
+          var flag = confirm("您确定要退出吗？");
+          if (flag){
+              //退出操作
+              alert("欢迎再次光临！");
+          }else{
+              alert("shoubiedou");
+          }
+  */
+        /*  var result = prompt("请输入用户名");
+          alert(result);*/
+       /* var openBtn = document.getElementById("openBtn");
+        var newWindow;
+        openBtn.onclick=function (ev) {
+            //打开新窗口
+            newWindow=open("https://www.baidu.com");
+        }
+        var closeBtn=document.getElementById("closeBtn");
+        closeBtn.onclick=function (ev) {
+            newWindow.close();
+        }*/
+        //var id = setTimeout(fun,3000);
+       // clearTimeout(id);
+        /*function fun() {
+            alert('boom~!');
+        }*/
+        //setInterval(fun,2000);
+        //获取当前历史记录
+        var h1 = window.history;
+        var h2=history;
+
+        alert(h1);
+        alert(h2);
+        window.document.getElementById("");
+        document.getElementById("");
+    </script>
+
+</body>
+</html>
