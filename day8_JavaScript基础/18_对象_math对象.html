@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>math对象</title>
+    <script>
+        /*
+        * math:数学
+        * 1，创建
+        *      1,math对象不用创建直接使用
+        *           math.方法名
+        * 2，方法
+        *   random():返回0~1的随机数[0,1)
+        *   ceil():对数进行上舍入
+        *   floor 对数进行下舍入
+        *   round（x） 把书四舍五入
+        *
+        * 3，属性
+        *   PI
+        *
+        *
+        *
+        *
+        * */
+        document.write(Math.PI+"<br>");
+        document.write(Math.random()+"<br>");
+        document.write(Math.round(3.14)+"<br>");
+
+        /*
+        * 取1~100的随机整数
+        *       1,Math.random产生随机数 范围0-1
+        *       2，乘以100 （0-99,9999）
+        *       3，舍弃小数部分floor
+        *       4 0-99的整数范围 +1——》1-100
+        * */
+         var number=Math.floor(Math.random()*100)+1;
+         document.write(number);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

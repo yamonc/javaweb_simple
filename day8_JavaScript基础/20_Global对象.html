@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局对象</title>
+    <script>
+
+        /*
+        * Global对象：
+        *       1,特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用 方法名（）；
+        *       2，方法
+        *           encodeURI（）；url编码
+        *           decondeURI（）；URl解码
+        *
+        *
+        *           encodeURIComponent（）；url编码,编码的字符更多
+        *           decodeURIComponent（）；URl解码
+        *           utf-8编码一个汉字三个字节
+        *           jBk编码一个汉字两个字节
+        *           parseInt():将字符串转为数字
+        *               *逐一判断每一个字符是否为数字，直到不是数字位置，将前面
+        *               数字部分转为number
+        *           isNaN():判断是否是NaN
+        *               *NaN六亲不认NaN参与的比较全部为false，连自己都不认
+        *              eval（）将JavaScript的字符串转为javascript脚本运行
+        *
+        * %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+        * */
+        var str="http://www.baidu.com?wd=传智播客";
+        var encode=encodeURI(str);
+        document.write(encode+"<br>");
+        var s=decodeURI(encode);
+        document.write(s+"<br>");
+
+        var str1="http://www.baidu.com?wd=传智播客";
+        var encode1=encodeURIComponent(str1);
+        document.write(encode1+"<br>");
+        var s1=decodeURIComponent(encode1);
+        document.write(s1+"<br>");
+
+
+
+        var str="123abc";
+        var number = parseInt(str);
+        alert(number+1);
+
+        var jscode="alert(123)";
+        eval(jscode);
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

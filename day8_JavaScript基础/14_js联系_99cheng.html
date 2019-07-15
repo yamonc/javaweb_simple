@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+    <style>
+
+        td{
+            border: 1px solid;
+        }
+    </style>
+    <script>
+
+
+        document.write("<table  align='center'>");
+        //1完成基本的for循环，展示乘法表
+        for (var i = 1; i <=9 ; i++) {
+            document.write("<tr>");
+            for (var j = 1; j <=i ; j++) {
+                document.write("<td>");
+                //output1*1=1
+                document.write(i+"*"+j+"="+(i*j)+"&nbsp;&nbsp;&nbsp;");
+                document.write("</td>");
+            }
+            //output huanghang
+            //document.write("<br>");
+            document.write("</tr>")
+        }
+        //2完成表格嵌套
+        document.write("</table>")
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

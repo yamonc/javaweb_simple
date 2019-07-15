@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>与或非关系</title>
+    <script>
+        /*逻辑运算符:
+        * &&与（短路）
+        * ||或（短路）
+        * ！非
+        *   其他类型转boolean
+        *       ·1，number：0或NAN为假，其他为真
+        *         2,string：除了空字符串（“ ”），其他都是true
+        *       3null&undefined 都是false
+        *       4对象 都是true
+        * */
+        var flag=true;
+        document.write(flag+"<br>");
+        document.write(!flag+"<br>");
+        document.write(flag+"<br>");
+
+        document.write("<hr>");
+
+        var num=3;
+        var num2=0;
+        var num3=NaN;
+        document.write(num+"<br>");
+        document.write(!num+"<br>");
+        document.write("<hr>")
+        document.write(!!num2+"<br>");
+        document.write(!!num3+"<br>");
+        document.write("<hr>")
+
+        var str1="abc";
+        var str2="";
+        document.write(!!str1+"<br>");
+        document.write(!!str2+"<br>");
+        document.write("<hr>");
+
+        //null &undefined
+        var obj=new Date();
+        var obj2;
+        document.write(!!obj+"<br>");
+        document.write(!!obj2+"<br>");
+        document.write("<hr>");
+        //对象
+        var data=new Date();
+
+        document.write(!!data+"<br>");
+        document.write("<hr>")
+
+        if(obj!=null){
+            alert("123");
+        }
+        if (obj){
+            alert("222");
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
