@@ -13,7 +13,7 @@
         window.onload=function (ev) {
             document.getElementById("img").onclick=function (ev1) {
 
-                this.src="/day16/checkCodeServlet?time="+new Date().getTime();
+                this.src = "${pageContext.request.contextPath}/checkCodeServlet?time=" + new Date().getTime();
             }
         }
     </script>
@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-<form action="/day16/loginServlet" method="post">
+<form action="${pageContext.request.contextPath}/loginServlet" method="post">
     <table>
         <tr>
             <td>用户名</td>
@@ -49,14 +49,15 @@
     </table>
 
 
-
-    <div>
-        <%=request.getAttribute("cc_error")==null? "":request.getAttribute("cc_error")%>
-    </div>
-    <div>
-        <%=request.getAttribute("login_error")==null? "":request.getAttribute("login_error")%>
-
-    </div>
 </form>
+${requestScope.cc_error}
+
+<div>
+    <%=request.getAttribute("cc_error") == null ? "" : request.getAttribute("cc_error")%>
+</div>
+<div>
+    <%=request.getAttribute("login_error") == null ? "" : request.getAttribute("login_error")%>
+
+</div>
 </body>
 </html>
